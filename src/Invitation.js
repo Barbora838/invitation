@@ -10,12 +10,14 @@ const titleStyle = {
   fontFamily: 'Pacifico, cursive',
   fontSize: '65px',
   color: 'rgb(111, 60, 58)',
+  marginTop: '10px',
 };
 
 const titleStyle2 = {
   fontFamily: 'Pacifico, cursive',
   fontSize: '55px',
   color: 'rgb(111, 60, 58)',
+  marginTop: '10px',
 };
 
 const subTitleStyle = {
@@ -51,21 +53,21 @@ const InvitationPage = ({ weddingType, language, locales }) => {
         </div>
         { weddingType === 'CR' &&
           <MyLocation
-            time={locales[language].address.time}
+            time={locales[language].address.crtime}
             address={locales[language].address.crAddress}
             date={locales[language].address.crDate}
           />
         }
         { weddingType === 'TR' &&
           <MyLocation
-            time={locales[language].address.time}
+            time={locales[language].address.trtime}
             address={locales[language].address.trAddress}
             date={locales[language].address.trDate}
           />
         }
         <div className="text-container subtitle2 margin-top2 uper-case margin-bottom2">
           <div className="margin-bottom1 margin-top1">{locales[language].invitation.receptionToFollow}</div>
-          <div>{locales[language].invitation.receptionToFollow2}</div>
+          {/* <div>{locales[language].invitation.receptionToFollow2}</div> */}
         </div>
         <div className="image-container-bottom">
           <img
@@ -103,7 +105,7 @@ const InvitationPage = ({ weddingType, language, locales }) => {
                 {locales[language].invitation.w2}
               </button>
             </div>
-            {locales[language].invitation.theWeddingOf}
+            {locales[language].invitation.theWeddingOf2}
           </div>
         </div>
         <div className="text-container subtitle2">
@@ -113,21 +115,21 @@ const InvitationPage = ({ weddingType, language, locales }) => {
         </div>
         { currentType === 'CR' &&
           <MyLocation
-            time={locales[language].address.time}
+            time={locales[language].address.crtime}
             address={locales[language].address.crAddress}
             date={locales[language].address.crDate}
           />
         }
         { currentType === 'TR' &&
           <MyLocation
-            time={locales[language].address.time}
+            time={locales[language].address.trtime}
             address={locales[language].address.trAddress}
             date={locales[language].address.trDate}
           />
         }
         <div className="text-container subtitle2 margin-top2 uper-case margin-bottom2">
           <div className="margin-bottom1 margin-top1">{locales[language].invitation.receptionToFollow}</div>
-          <div>{locales[language].invitation.receptionToFollow2}</div>
+          {/* <div>{locales[language].invitation.receptionToFollow2}</div> */}
         </div>
         <div className="image-container-bottom">
           <img
