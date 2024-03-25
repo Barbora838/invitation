@@ -6,13 +6,21 @@
     justify-content: center;
     /* margin-bottom: 20px; */
   }
-
-  /* Center the design-bottom image at the bottom */
-  .image-container-bottom {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
+  @media (max-width: 600px) {
+    .text-container {
+      position: relative; 
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  
+    .image-container-bottom {
+      position: absolute; /* Position the image absolutely within the text container */
+      bottom: 0; /* Align the image at the bottom of the text container */
+      left: 50%; /* Align the image horizontally at the center */
+      transform: translateX(-50%) rotate(180deg); /* Apply rotation */
+      margin-top: 20px; /* Add margin between the text and the image */
+    }
   }
   
   /* Styles for language switcher button */
